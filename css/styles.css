@@ -20,7 +20,6 @@ html {
     font: inherit;
 }
 
-
 /****************************************
   Defaults
 *****************************************/
@@ -66,7 +65,6 @@ body {
 	background-position: center center;
 	background-repeat: no-repeat;
 }
-
 
 .primary-header > div {
 	color: #fff;
