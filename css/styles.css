@@ -38,11 +38,11 @@ body {
 *****************************************/
 
 .page {
-	/*min-height: 800px;*/
+	min-height: 100vh;
 	text-align: center;
 	background: radial-gradient(rgba(136, 139, 140, .9), 
 		rgba(136, 139, 140, .8)), 
-		url('../images/puddles.jpg');
+		url('../images/puddles-1000px.jpg');
 	background-size: cover;
 	background-position: center center;
 	padding: 60px;
@@ -61,7 +61,7 @@ body {
 }
 
 .page > div:first-child {
-	background: url('../images/puddles_sm.jpg');
+	background: url('../images/puddles_sm1000px.jpg');
 		background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
