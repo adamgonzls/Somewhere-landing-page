@@ -49,7 +49,7 @@ body {
 }
 
 .page > div {
-	width: 95%;
+	max-width: 1000px;
 	margin: auto auto;
 }
 
@@ -166,3 +166,10 @@ nav > a {
 	right: 0;
 }
 
+/****************************************
+  Media Queries
+*****************************************/
+
+/*@media only screen and (max-width: 768px) {
+
+}*/
