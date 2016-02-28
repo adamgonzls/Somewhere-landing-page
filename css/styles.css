@@ -37,7 +37,7 @@ body {
 *****************************************/
 
 .page {
-	min-height: 100vh;
+	min-height: 100%;
 	text-align: center;
 	background: radial-gradient(rgba(136, 139, 140, .9), 
 		rgba(136, 139, 140, .8)), 
@@ -61,7 +61,7 @@ body {
 
 .page > div:first-child {
 	background: url('../images/puddles_sm1000px.jpg');
-		background-size: cover;
+	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
 }
@@ -80,17 +80,33 @@ body {
 }
 
 .action {
+	font-weight: 400;
 	font-size: 8pt;
 	background-color: #0A00E7;
-	border: none;
+	border: 2px solid transparent;
 	margin-left: 15px;
+	transition: all .2s;
+}
+
+.action:hover {
+	background-color: #fff;
+	color: blue;
+	border: 2px solid blue;
+	transform: scale(1.3);
 }
 
 nav > a {
-	font-size: 8pt;
+	/*color: #777;*/
+	font-weight: 400;
+	font-size: .75em;
 	text-decoration: none;
 	text-transform: uppercase;
 	padding: 15px;
+}
+
+nav > a:hover {
+	/*color: red;*/
+	border-bottom: 2px solid rgba(255, 255, 255, 0.7);
 }
 
 .attention-content {
@@ -103,6 +119,13 @@ nav > a {
 	font-size: 10pt;
 	background-color: transparent;
 	border: 1px solid #787F7C;
+	transition: color .25s;
+}
+
+.cta:hover {
+	color: #fff;
+	/*border-color: #fff;*/
+	background-color: #787F7C;
 }
 
 /****************************************
