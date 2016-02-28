@@ -45,7 +45,6 @@ body {
 	background-size: cover;
 	background-position: center center;
 	padding: 60px;
-
 }
 
 .page > div {
@@ -96,7 +95,6 @@ body {
 }
 
 nav > a {
-	/*color: #777;*/
 	font-weight: 400;
 	font-size: .75em;
 	text-decoration: none;
@@ -105,7 +103,6 @@ nav > a {
 }
 
 nav > a:hover {
-	/*color: red;*/
 	border-bottom: 2px solid rgba(255, 255, 255, 0.7);
 }
 
@@ -114,17 +111,17 @@ nav > a:hover {
 	color: #fff;
 }
 
-.attention-content > button {
+.cta {
+	font-weight: 400;
 	color: #A6A8A3;
 	font-size: 10pt;
 	background-color: transparent;
-	border: 1px solid #787F7C;
+	border: 2px solid #787F7C;
 	transition: color .25s;
 }
 
 .cta:hover {
 	color: #fff;
-	/*border-color: #fff;*/
 	background-color: #787F7C;
 }
 
