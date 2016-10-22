@@ -35,13 +35,10 @@ body {
 /****************************************
   Layout
 *****************************************/
-
 .page {
-	min-height: 100%;
+	height: 100vh;
 	text-align: center;
-	background: -webkit-radial-gradient(rgba(136, 139, 140, .9), 
-		rgba(136, 139, 140, .8)), 
-		url('../images/puddles-1000px.jpg');
+	background: #808587;
 	background: radial-gradient(rgba(136, 139, 140, .9), 
 		rgba(136, 139, 140, .8)), 
 		url('../images/puddles-1000px.jpg');
@@ -56,9 +53,6 @@ body {
 }
 
 .primary-header {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
 	padding-top: 40px;
 	position: relative;
@@ -90,7 +84,6 @@ body {
 	background-color: #0A00E7;
 	border: 2px solid transparent;
 	margin-left: 15px;
-	-webkit-transition: all .2s;
 	transition: all .2s;
 }
 
@@ -98,8 +91,7 @@ body {
 	background-color: rgba(255, 255, 255, .2);
 	color: blue;
 	border: 2px solid blue;
-	-webkit-transform: scale(1.3);
-	        transform: scale(1.3);
+	transform: scale(1.3);
 }
 
 nav > a {
@@ -125,7 +117,6 @@ nav > a:hover {
 	font-size: 10pt;
 	background-color: transparent;
 	border: 2px solid #787F7C;
-	-webkit-transition: color .25s;
 	transition: color .25s;
 }
 
@@ -137,7 +128,6 @@ nav > a:hover {
 /****************************************
   Components
 *****************************************/
-
 .standout {
 	text-shadow: 0px 0px 5px #555;
 }
@@ -150,9 +140,6 @@ nav > a:hover {
 }
 
 .media-object {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
 	position: relative;
 }
@@ -185,10 +172,7 @@ nav > a:hover {
 }
 
 .media-image {
-	-webkit-box-flex: 1;
-	-webkit-flex: 1;
-	    -ms-flex: 1;
-	        flex: 1;
+	flex: 1;
 	background-color: white;
 	background: url('../images/sitting.jpg');
 	background-size: cover;
@@ -200,11 +184,3 @@ nav > a:hover {
 	bottom: 0;
 	right: 0;
 }
-
-/****************************************
-  Media Queries
-*****************************************/
-
-/*@media only screen and (max-width: 768px) {
-
-}*/
