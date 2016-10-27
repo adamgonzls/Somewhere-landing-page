@@ -36,15 +36,17 @@ body {
   Layout
 *****************************************/
 .page {
-	height: 100vh;
-	text-align: center;
-	background: #808587;
-	background: radial-gradient(rgba(136, 139, 140, .9), 
-		rgba(136, 139, 140, .8)), 
-		url('../images/puddles-1000px.jpg');
-	background-size: cover;
-	background-position: center center;
-	padding: 60px;
+	@include wider-than(800px) {
+		height: 100vh;
+		text-align: center;
+		background: $oslo-gray;
+		background: radial-gradient(rgba(136, 139, 140, .9), 
+			rgba(136, 139, 140, .8)), 
+			url('../images/puddles-1000px.jpg');
+		background-size: cover;
+		background-position: center center;
+		padding: 60px;
+	}
 }
 
 .page > div {
@@ -53,9 +55,12 @@ body {
 }
 
 .primary-header {
-	display: flex;
-	padding-top: 40px;
-	position: relative;
+	color: $white;
+	@include wider-than(480px) {
+		display: flex;
+		padding-top: 40px;
+		position: relative;
+	}
 }
 
 .page > div:first-child {
@@ -66,31 +71,43 @@ body {
 }
 
 .primary-header > div {
-	color: #fff;
-	position: absolute;
-	left: 60px;
-	font-weight: 400;
+	@include less-than(480px) {
+		text-align: center;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+	@include wider-than(480px) {
+		position: absolute;
+		left: 60px;
+		font-weight: 400;
+	}
 }
 
 .primary-header > nav {
-	color: #fff;
-	position: absolute;
-	right: 70px;
+	@include wider-than(480px) {
+		position: absolute;
+		right: 70px;
+	}
 }
 
 .action {
+	@include less-than(480px) {
+		margin-top: 40px;
+	}
 	font-weight: 400;
 	font-size: 8pt;
-	background-color: #0A00E7;
+	background-color: $candy-apple;
 	border: 2px solid transparent;
-	margin-left: 15px;
 	transition: all .2s;
+	@include wider-than(480px) {
+		margin-left: 15px;
+	}
 }
 
 .action:hover {
 	background-color: rgba(255, 255, 255, .2);
-	color: blue;
-	border: 2px solid blue;
+	color: $candy-apple;
+	border: 2px solid $candy-apple;
 	transform: scale(1.3);
 }
 
@@ -107,29 +124,33 @@ nav > a:hover {
 }
 
 .attention-content {
+	@include less-than(480px) {
+		text-align: center;
+	}
 	padding: 100px 0;
-	color: #fff;
+	color: $white;
 }
 
 .cta {
 	font-weight: 400;
-	color: #A6A8A3;
+	color: $white;
+	background-color: rgba(120, 127, 124, .5);
 	font-size: 10pt;
-	background-color: transparent;
-	border: 2px solid #787F7C;
-	transition: color .25s;
+	border: 2px solid $gunsmoke;
+	transition: all .25s ease-in-out;
 }
 
 .cta:hover {
-	color: #fff;
-	background-color: rgba(120, 127, 124, .5);
+	background-color: transparent;
+	border-color: $white;
 }
 
 /****************************************
   Components
 *****************************************/
 .standout {
-	text-shadow: 0px 0px 5px #555;
+	text-align: center;
+	text-shadow: 0px 0px 5px $emperor;
 }
 
 .button-style {
@@ -140,21 +161,33 @@ nav > a:hover {
 }
 
 .media-object {
-	display: flex;
-	position: relative;
+	@include wider-than(650px) {
+		display: flex;
+		position: relative;
+	}
 }
 
 .media-content {
-	width: 50%;
-	color: #fff;
-	text-align: left;
-	background-color: #000;
-	padding: 40px 70px 0px 70px;
+	color: $white;
+	background-color: $black;
+	@include wider-than(650px) {
+		width: 50%;
+		text-align: left;
+		padding: 40px 70px 0px 70px;
+	}
 }
 
 .media-content > div {
-	border-left: 2px solid white;
-	padding-left: 20px;
+	@include less-than(480px){
+		padding: 5px;
+		text-align: center;
+	}
+	@include wider-than(480px) {
+		padding-left: 20px;
+	}
+	@include wider-than(650px) {
+		border-left: 2px solid $white;
+	}
 }
 
 .media-content h2 {
@@ -165,22 +198,28 @@ nav > a:hover {
 }
 
 .media-content p {
-	font-size: 10pt;
-	line-height: 200%;
-	margin: 0 80px 0 0;
-	padding-bottom: 20px;
+	@include wider-than(480px) {
+		font-size: 10pt;
+		line-height: 200%;
+		margin: 0 80px 0 0;
+		padding-bottom: 20px;
+	}
 }
 
 .media-image {
-	flex: 1;
-	background-color: white;
+	width: 100vw;
+	height: 100vh;
+	background-color: $white;
 	background: url('../images/sitting.jpg');
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
-	width: 50%;
-	min-height: 110%;
-	position: absolute;
-	bottom: 0;
-	right: 0;
+	@include wider-than(650px){
+		position: absolute;
+		width: 50%;
+		height: 110%;
+		flex: 1;
+		bottom: 0;
+		right: 0;
+	}
 }
