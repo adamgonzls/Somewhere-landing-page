@@ -8,16 +8,16 @@ https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-pract
 */
 
 html {
-    box-sizing: border-box;
-    color: #444;
-    font: 12pt 'Lato', 'Open Sans', Arial;
-    font-weight: 300;
+  box-sizing: border-box;
+  color: #444;
+  font: 12pt 'Lato', 'Open Sans', Arial;
+  font-weight: 300;
 }
 
 *, *::before, *::after {
-    box-sizing: inherit;
-    color: inherit;
-    font: inherit;
+  box-sizing: inherit;
+  color: inherit;
+  font: inherit;
 }
 
 /****************************************
@@ -56,7 +56,7 @@ body {
 
 .primary-header {
 	color: $white;
-	@include wider-than(480px) {
+	@include wider-than(640px) {
 		display: flex;
 		padding-top: 40px;
 		position: relative;
@@ -71,12 +71,12 @@ body {
 }
 
 .primary-header > div {
-	@include less-than(480px) {
+	@include less-than(640px) {
 		text-align: center;
-		padding-top: 5px;
+		padding-top: 20px;
 		padding-bottom: 5px;
 	}
-	@include wider-than(480px) {
+	@include wider-than(640px) {
 		position: absolute;
 		left: 60px;
 		font-weight: 400;
@@ -84,14 +84,14 @@ body {
 }
 
 .primary-header > nav {
-	@include wider-than(480px) {
+	@include wider-than(640px) {
 		position: absolute;
 		right: 70px;
 	}
 }
 
 .action {
-	@include less-than(480px) {
+	@include less-than(640px) {
 		margin-top: 40px;
 	}
 	font-weight: 400;
@@ -99,7 +99,7 @@ body {
 	background-color: $candy-apple;
 	border: 2px solid transparent;
 	transition: all .2s;
-	@include wider-than(480px) {
+	@include wider-than(640px) {
 		margin-left: 15px;
 	}
 }
@@ -124,7 +124,7 @@ nav > a:hover {
 }
 
 .attention-content {
-	@include less-than(480px) {
+	@include less-than(640px) {
 		text-align: center;
 	}
 	padding: 100px 0;
@@ -148,6 +148,10 @@ nav > a:hover {
 /****************************************
   Components
 *****************************************/
+.logo {
+	font-size: 1.2em;
+}
+
 .standout {
 	text-align: center;
 	text-shadow: 0px 0px 5px $emperor;
